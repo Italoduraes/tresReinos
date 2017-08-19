@@ -55,7 +55,21 @@ public class Turma {
 		this.alunos.add(aluno);
 	}
 	
-	
+	public String listarAlunos(){
+		String retorno ="";
+		
+		//Verificar se existem alunos na turma 
+		if(this.alunos.size() == 0){
+			retorno = "Nenhum alunos registrado na turma!";
+		}else {
+			//Navegar pela estrutura de alunos
+			for (int i=0; i < this.alunos.size();i++){
+				retorno = retorno + "Nome: " +this.alunos.get(i).getNome() + "\n";
+			}
+		}
+		
+		return retorno;
+	}
 	
 	
 	
