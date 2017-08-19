@@ -1,4 +1,5 @@
-import java.util.Calendar;
+import java.time.LocalDate;
+
 
 public class Aluno {
 	
@@ -7,13 +8,13 @@ public class Aluno {
 	private String nome;
 	private String RA;
 	private String sexo;
-	private Calendar dataNascimento;
+	private LocalDate dataNascimento;
 	
 	
 
 	// Metodos construtor
 	
-	public Aluno(String nome, String rA, String sexo, Calendar dataNascimento) {
+	public Aluno(String nome, String rA, String sexo, LocalDate dataNascimento) {
 		this.nome = nome;
 		RA = rA;
 		this.sexo = sexo;
@@ -43,17 +44,17 @@ public class Aluno {
 	public void setSexo(String sexo) {
 		this.sexo = sexo;
 	}
-	public Calendar getdataNascimento() {
+	public LocalDate getdataNascimento() {
 		return dataNascimento;
 	}
-	public void setData(Calendar dataNascimento) {
+	public void setData(LocalDate dataNascimento) {
 		this.dataNascimento = dataNascimento;
 	}
 	// 
 		public String getDataComoString(){
-			return this.dataNascimento.get(Calendar.DAY_OF_MONTH ) + "/" +
-		           this.dataNascimento.get(Calendar.MONTH) + "/" +
-					this.dataNascimento.get(Calendar.YEAR);
+			return dataNascimento.getDayOfMonth() + "/" +
+				   dataNascimento.getMonthValue() + "/" +
+					dataNascimento.getYear();
 		}
 	
 	
