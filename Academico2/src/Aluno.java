@@ -10,8 +10,8 @@ public class Aluno {
 	private String sexo;
 	private LocalDate dataNascimento;
 	
-	
-
+	 
+ 
 	// Metodos construtor
 	
 	public Aluno(String nome, String rA, String sexo, LocalDate dataNascimento) {
